@@ -5,7 +5,8 @@ input_list of floats as argument and returns their sum as a float.
 '''
 
 
-def sum_list(input_list: list[float]) -> float:
+from typing import List
+def sum_list(input_list: List[float]) -> float:
     'sum float numbers in input_list'
     total: float = sum(input_list)
     return float(total)
