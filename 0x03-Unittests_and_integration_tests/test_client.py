@@ -65,3 +65,9 @@ class TestGithubOrgClient(unittest.TestCase):
         """ unit-test for GithubOrgClient.has_license """
         result = GithubOrgClient.has_license(repo, license_key)
         self.assertEqual(result, expected)
+
+
+@parameterized_class(
+    ("org_payload", "repos_payload", "expected_repos", "apache2_repos"),
+    TEST_PAYLOAD
+)
